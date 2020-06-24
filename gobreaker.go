@@ -69,7 +69,7 @@ func ConfigGetter(e config.ExtraConfig) interface{} {
 // NewCircuitBreaker builds a gobreaker circuit breaker with the injected config
 func NewCircuitBreaker(cfg Config, logger logging.Logger) *gobreaker.CircuitBreaker {
 	settings := gobreaker.Settings{
-    Name: cfg.Name,
+		Name: cfg.Name,
 		Interval: time.Duration(cfg.Interval) * time.Second,
 		Timeout:  time.Duration(cfg.Timeout) * time.Second,
 		ReadyToTrip: func(counts gobreaker.Counts) bool {
