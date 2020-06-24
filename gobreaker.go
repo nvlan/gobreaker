@@ -14,7 +14,7 @@ const Namespace = "github.com/devopsfaith/krakend-circuitbreaker/gobreaker"
 
 // Config is the custom config struct containing the params for the sony/gobreaker package
 type Config struct {
-  Name            string
+	Name            string
 	Interval        int
 	Timeout         int
 	MaxErrors       int
